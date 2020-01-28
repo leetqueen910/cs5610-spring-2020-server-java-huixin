@@ -1,85 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Course Editor</title>
-        <link
-                href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-                rel="stylesheet"
-        />
-        <link href="course-editor.style.client.css"
-              rel="stylesheet"/>
-        <style>
-            h1 {
-                background-color: yellow;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container-fluid">
-        <h1 style="background-color: black">
-            Course Editor
-        </h1>
 
+<head>
+    <meta charset="UTF-8">
+    <title>Course Editor</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./course-editor.style.client.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark dark">
+            <span class="wbdv-course-editor wbdv-close close-icon col-sm-1">×</span>
+            <a class="navbar-brand wbdv-course-title" href="#">CS5610 - WebDev</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link wbdv-page-tab" href="#">Build <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wbdv-page-tab" href="#">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wbdv-page-tab" href="#">Theme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wbdv-page-tab" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wbdv-page-tab" href="#">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wbdv-page-tab" href="#">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="add-btn wbdv-new-page-btn"> + </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main">
             <div class="row">
-                <div class="col-4">
-                    <h2 id="wbdv-module-list">Module List</h2>
-
-                    <ul class="list-group">
-                        <li class="list-group-item">Module 1</li>
-                        <li class="list-group-item active">Module 2</li>
-                        <li class="list-group-item">Module 3</li>
+                <div class="side-left">
+                    <ul class="list-inline side wbdv-module-list">
+                        <li class="list-inline active center bgc-dark wbdv-module-item">
+                            <a class="nav-link wbdv-module-item-title" href="#">Module 1 - jQuery<span class="sr-only">(current)</span></a>
+                            <span class="close-icon wbdv-module-item-delete-btn">×</span>
+                        </li>
+                        <li class="list-inline center bgc-dark wbdv-module-item">
+                            <a class="nav-link wbdv-module-item-title" href="#">Module 2 - React</a>
+                            <span class="close-icon wbdv-module-item-delete-btn">×</span>
+                        </li>
+                        <li class="list-inline center bgc-dark wbdv-module-item">
+                            <a class="nav-link wbdv-module-item-title" href="#">Module 3 - Native</a>
+                            <span class="close-icon wbdv-module-item-delete-btn">×</span>
+                        </li>
+                        <li class="list-inline center bgc-dark wbdv-module-item">
+                            <a class="nav-link wbdv-module-item-title" href="#">Module 4 - Angular</a>
+                            <span class="close-icon wbdv-module-item-delete-btn">×</span>
+                        </li>
+                        <li class="list-inline center bgc-dark wbdv-module-item">
+                            <a class="nav-link wbdv-module-item-title" href="#">Module 5 - Node</a>
+                            <span class="close-icon wbdv-module-item-delete-btn">×</span>
+                        </li>
+                        <li class="list-inline center bgc-dark wbdv-module-item">
+                            <a class="nav-link wbdv-module-item-title" href="#">Module 6 - Mongo</a>
+                            <span class="close-icon wbdv-module-item-delete-btn">×</span>
+                        </li>
+                        <li class="list-inline center">
+                            <button class="add-btn primary wbdv-module-item-add-btn"> + </button>
+                        </li>
                     </ul>
-
-                    <span class="wbdv-bold">
-                        Some text
-                    </span>
                 </div>
-                <div class="col-8">
-                    <h2>Lessons</h2>
-
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Lesson 1
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="active nav-link" href="#">
-                                Lesson 2
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Lesson 3
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h3>Topics</h3>
-
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Topic 1
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="active nav-link" href="#">
-                                Topic 2
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Topic 3
-                            </a>
-                        </li>
-                    </ul>
+                <div class="main">
+                    <div class="row">
+                        <ul class="nav nav-pills list-inline side wbdv-topic-pill-list">
+                            <li class="list-inline-item active center bgc-dark wbdv-topic-pill">
+                                <a class="nav-link" href="#">Topic 1<span class="sr-only">(current)</span></a>
+                                <span class="close-icon">×</span>
+                            </li>
+                            <li class="list-inline-item center bgc-dark wbdv-topic-pill">
+                                <a class="nav-link" href="#">Topic 2</a>
+                                <span class="close-icon">×</span>
+                            </li>
+                            <li class="list-inline-item center bgc-dark">
+                                <a class="nav-link wbdv-topic-add-btn" href="#">Topic 3</a>
+                                <span class="close-icon">×</span>
+                            </li>
+                            <li class="list-inline-item center wbdv-topic-pill">
+                                <button class="add-btn primary"> + </button>
+                            </li>
+                        </ul>
+                        <div class="row d-flex flex-row-reverse bd-highlight">
+                            <div class="class= p-2 bd-highlight">
+                                <button type="button" class="btn btn-success">Save</button>
+                                <button type="button" class="btn btn-info">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>Heading Widget</h3>
+                            </div>
+                            <div class="col-4">
+                                <button><i class="fas fa-arrow-up"></i></button>
+                                <button><i class="fas fa-arrow-down"></i></button>
+                                <select name="Heading" id="">
+                                    <option value="Heading">Heading</option>
+                                </select>
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="row col-4">
+                            <form action="">
+                                <input class="form-group row col-12" type="text" value="Heading text">
+                                <select class="form-group row">
+                                    <option>
+                                        Heading 1
+                                    </option>
+                                </select>
+                                <input class="form-group row" type="text" placeholder="Widge Name">
+                            </form>
+                            <div class="row">
+                                <h3 class="row">preview</h3>
+                                <h2 class="row">Heading text</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

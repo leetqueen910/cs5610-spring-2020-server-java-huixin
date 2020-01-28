@@ -1,20 +1,85 @@
-h1 {
-    color: white;
-    background-color: red;
+.navbar.dark {
+  background-color: #474b51;
 }
-h2 {
-    color: yellow;
-    background-color: blue;
+.nav-item {
+  padding: 0 10px;
 }
-#wbdv-module-list {
-    background-color: cyan;
+
+.nav-item.active {
+  background-color: #333;
 }
-.wbdv-module {
-    background-color: lightgray;
+
+.add-btn {
+  line-height: 40px;
+  font-size: 25px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: #474b51;
+  color: #fff;
 }
-.wbdv-bold {
-    font-weight: bolder;
+
+.close-icon {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
 }
-.wbdv-module.wbdv-selected {
-    background-color: darkgray;
+
+.add-btn.primary {
+  background-color: #333;
+}
+
+.side-left {
+  max-width: 250px;
+  background-color: #333;
+}
+
+.list-inline.side {
+  padding: 20px;
+}
+
+.list-inline .nav-link {
+  color: #fff;
+}
+
+.list-inline.center.active {
+  background-color: #00f;
+}
+
+.center {
+  text-align: center;
+}
+
+.list-inline.center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.list-inline-item.center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.list-inline-item.center.active {
+  background-color: #333;
+}
+
+.bgc-dark {
+  background-color: #474b51
+}
+
+.main .row {
+  margin-left: 0;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 30px;
+  border: 2px solid #f0f0f0;
 }
