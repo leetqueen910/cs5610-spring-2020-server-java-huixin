@@ -19,7 +19,7 @@ addBtn.click(function () {
 })
 
 updateBtn.click(function () {
-    updateUser(id);
+    updateUser();
 })
 
 // search function
@@ -57,11 +57,7 @@ function createUser() {
     let usr = new User(usernameFld.val(), passwordFld.val(), firstnameFld.val(), lastnameFld.val(), roleFld.val());
     let res = client.createUser(usr);
     res.then((newUser) => {
-        usernameFld.val('');
-        passwordFld.val('');
-        firstnameFld.val('');
-        lastnameFld.val('');
-        roleFld.val('');
+        clearInputs();
         users.push(newUser);
         renderUsers(users);
     })
@@ -105,6 +101,7 @@ function updateUser() {
         usr.role = roleFld.val();
         let updateRes = client.updateUser(id, usr);
         updateRes.then(() => {
+            clearInputs();
             renderUser(usr);
         })
         updateRes.catch((err)=>console.log(err))
@@ -192,4 +189,12 @@ function renderUsers(userArray) {
         newRow.find(".wbdv-role").text(user.role);
         tbody.append(newRow);
     }
+}
+
+function clearInputs() {
+    usernameFld.val('');
+    passwordFld.val('');
+    firstnameFld.val('');
+    lastnameFld.val('');
+    roleFld.val('');
 }
